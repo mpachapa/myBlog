@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log-in</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<!-- This is the log-in page -->
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="tutorial.html">Tutorial</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about_us.html">About Us</a>
+  <a class="active" href="login.html">Log In</a>
+</div>
+
+	<!-- This is the imbeded script for log-in -->
+	
+	<script>
+	function validateForm(){
+		var user = forms.username.value
+		var pass = forms.pswrd.value
+		if(user == "username" && pass == "123456"){
+			window.open('index.html')
+			return true;
+		}
+		else{
+			alert("The username is username and the password is 123456")
+			return false;
+		}
+	}
+	</script>
+
+<body>
+	<h1>Log in</h1>
+	<form name="login" action="" onsubmit="return validateForm()" method="post">
+		<input type="text" placeholder="Username" name="username"><br>
+		<input type="password" placeholder="Password" name="pswrd"><br>
+		<input type="submit" value="Login">
+	</form>
+	<p>If you have any questions please contact me by going to <a href="about_us.html">About Us</a>
+</body>
+
+	
+<footer>
+	<h3>&copy Matthew Pachapa 2018</h3>
+
+</footer>
+
+</html>
