@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
+
+Don't be abrasive when recieving feedback, how you respond matters, what are things to consider.. not trying to be passive about it;
+
 <head>
-	<title>Gallery for my website</title>
-	<link rel="stylesheet" type="text/css" href="gallery.css">
-	<script src="gallery.js"></script>
+    <title>Gallery for my website</title>
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <script src="gallery.js"></script>
 </head>
 
 <!-- This is the gallery page -->
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="tutorial.html">Tutorial</a>
-  <a class="active" href="gallery.html">Gallery</a>
-  <a href="about_us.html">About Us</a>
-  <a href="login.html">Log In</a>
+    <a href="index.html">Home</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a class="active" href="gallery.html">Gallery</a>
+    <a href="about_us.html">About Us</a>
+    <a href="login.html">Log In</a>
 </div>
 
 <body>
-	<h1>Gallery</h1>
-		<p id="explanation">This is an example of using buttons to change the images on a webpage. 
-		I pulled the images from pixabay and from the user Nadine.</p>
-		
-		<div class="buttons">
-			<input type="button" value="image 1" id="btn1" />
-			<input type="button" value="image 2" id="btn2" />
-			<input type="button" value="image 3" id="btn3" />
-			<input type="button" value="image 4" id="btn4" />
-			<input type="button" value="image 5" id="btn5" />
-			<input type="button" value="image 6" id="btn6" />
-			<input type="button" value="image 7" id="btn7" />
-			<input type="button" value="image 8" id="btn8" />
-		</div>
-		
-		<div id="slideshow">
-            <img src="Slides/slide01.png" width="1000" height="700" alt="baby pic" id="myImage"/>
-        </div>
-	
+    <h1>Gallery</h1>
+    <p id="explanation">This is an example of using buttons to change the images on a webpage. I pulled the images of Ukraine from pixabay and from the user Nadine.</p>
+
+    <div class="buttons">
+        <input type="button" value="image 1" id="btn1" />
+        <input type="button" value="image 2" id="btn2" />
+        <input type="button" value="image 3" id="btn3" />
+        <input type="button" value="image 4" id="btn4" />
+        <input type="button" value="image 5" id="btn5" />
+        <input type="button" value="image 6" id="btn6" />
+        <input type="button" value="image 7" id="btn7" />
+        <input type="button" value="image 8" id="btn8" />
+    </div>
+
+    <div id="slideshow">
+        <img src="Ukraine/ukraine-1.jpg" width="1000" height="700" alt="Ukraine" id="currentImage" />
+    </div>
+
+    <div class="pnbtns">
+        <input type="button" value="Previous" id="pr" onclick="showDiv(slideshow + 1)" />
+        <input type="button" value="Next" id="nx" onclick="showDiv(slideshow + 1)" />
+    </div>
+
 </body>
 
 <footer>
-	<h3>&copy Matthew Pachapa 2018</h3>
+    <h3>&copy Matthew Pachapa 2018</h3>
 </footer>
 
 </html>
