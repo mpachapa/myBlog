@@ -1,3 +1,4 @@
+//BOF
 window.onload = function() {
     //enter in the function to be called when the button is clicked
     document.getElementById("btn1").onclick = changeImage1;
@@ -10,46 +11,71 @@ window.onload = function() {
     document.getElementById("btn8").onclick = changeImage8;
 };
 
-function showDiv(img) {
-    console.log(img);
-    for (i = 0; i < 13; i++) {
-        document.getElementById("Ukraine/ukraine-" + i).style.display = "slideshow";
-    }
-    //in the next 2 lines, you make sure img isn't lower than 1, and isn't greater than the number of images
-    if (img < 1) img = 1;
-    if (img > 8) img = 8;
-    document.getElementById("Ukraine/ukraine-" + img).style.display = "slideshow";
-    currentImage = img;
+//variable to keep track of the image on screen
+var counter = 1;
+
+//next image function
+function next(){
+    console.log(counter)
+    if (counter == 8){
+        counter = 1;
+    }   
+    counter++;  
+    document.getElementById("currentImage").src = `Ukraine/ukraine-${counter}.jpg`;
+    
 }
 
+//previous image function
+function previous(){
+    console.log(counter)
+    if (counter == 1){
+        counter = 8;
+    }
+    counter--;
+    document.getElementById("currentImage").src = `Ukraine/ukraine-${counter}.jpg`;
+    
+}
+
+
+//Change functions for each of the buttons
 function changeImage1() {
+    counter = 1;
     document.getElementById("currentImage").src = "Ukraine/ukraine-1.jpg";
 }
 
 function changeImage2() {
+    counter = 2;
     document.getElementById("currentImage").src = "Ukraine/ukraine-2.jpg";
 }
 
 function changeImage3() {
+    counter = 3;
     document.getElementById("currentImage").src = "Ukraine/ukraine-3.jpg";
 }
 
 function changeImage4() {
+    counter = 4;
     document.getElementById("currentImage").src = "Ukraine/ukraine-4.jpg";
 }
 
 function changeImage5() {
+    counter = 5;
     document.getElementById("currentImage").src = "Ukraine/ukraine-5.jpg";
 }
 
 function changeImage6() {
+    counter = 6;
     document.getElementById("currentImage").src = "Ukraine/ukraine-6.jpg";
 }
 
 function changeImage7() {
+    counter = 7;
     document.getElementById("currentImage").src = "Ukraine/ukraine-7.jpg";
 }
 
 function changeImage8() {
+    counter = 8;
     document.getElementById("currentImage").src = "Ukraine/ukraine-8.jpg";
 }
+
+//EOF

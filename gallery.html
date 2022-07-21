@@ -24,6 +24,7 @@
     <p id="explanation">This is my example of using buttons to change the images on a webpage, as well as the ability to cycle through all of the images. I pulled the images of Ukraine from pixabay and from the user Nadine.</p>
 
     <div class="buttons">
+        <input type="button" value="Previous" id="pr" onclick="previous()" />
         <input type="button" value="Image 1" id="btn1" />
         <input type="button" value="Image 2" id="btn2" />
         <input type="button" value="Image 3" id="btn3" />
@@ -32,16 +33,17 @@
         <input type="button" value="Image 6" id="btn6" />
         <input type="button" value="Image 7" id="btn7" />
         <input type="button" value="Image 8" id="btn8" />
+        <input type="button" value="Next" id="nx" onclick="next()" />
     </div>
     <br>
     <div id="slideshow">
         <img src="Ukraine/ukraine-1.jpg" width="1000" height="700" alt="Ukraine" id="currentImage" />
     </div>
     <br>
-    <div class="pnbtns">
-        <input type="button" value="Previous" id="pr" onclick="showDiv(slideshow - 1)" />
-        <input type="button" value="Next" id="nx" onclick="showDiv(slideshow + 1)" />
-    </div>
+    <!-- <div class="pnbtns">
+        <input type="button" value="Previous" id="pr" onclick="previous()" />
+        <input type="button" value="Next" id="nx" onclick="next()" />
+    </div> -->
 
 </body>
 
