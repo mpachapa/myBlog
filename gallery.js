@@ -11,15 +11,15 @@ window.onload = function() {
 };
 
 function showDiv(img) {
+    console.log(img);
     for (i = 0; i < 13; i++) {
-        document.getElementById("Ukraine/ukraine-" + i).style.display = "none";
+        document.getElementById("Ukraine/ukraine-" + i).style.display = "slideshow";
     }
     //in the next 2 lines, you make sure img isn't lower than 1, and isn't greater than the number of images
     if (img < 1) img = 1;
-    if (img > 13) img = 13;
-    document.getElementById("Ukraine/ukraine-" + img).style.display = "block";
+    if (img > 8) img = 8;
+    document.getElementById("Ukraine/ukraine-" + img).style.display = "slideshow";
     currentImage = img;
-
 }
 
 function changeImage1() {
